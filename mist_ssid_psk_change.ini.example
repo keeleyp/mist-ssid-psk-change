@@ -1,0 +1,25 @@
+; Mist SSID PSK Change - settings
+; Copy to mist_ssid_psk_change.ini and fill in. Never commit the real .ini.
+
+[mist]
+; Portal hostname -> cloud: manage.mist.com = global01 (api.mist.com),
+; manage.eu.mist.com = api.eu.mist.com, manage.gc3.mist.com = api.gc3.mist.com, etc.
+; Either the short cloud name (gc3, eu, ac2 ...) or the full API host is accepted.
+cloud     = gc3
+api_token = your-api-token-here
+org_id    = 00000000-0000-0000-0000-000000000000
+wlan_id   = 00000000-0000-0000-0000-000000000000
+; Leave blank for an org-level (WLAN Template) WLAN.
+; Set it only if the WLAN was created directly on a site.
+site_id   =
+
+[network]
+; Optional - for Zscaler / corporate proxies. Leave out to use system defaults.
+; PowerShell uses the operating system certificate store, so a Zscaler root CA
+; installed in Windows (or the macOS Keychain) is trusted automatically.
+; verify_ssl = false disables certificate checks (last resort, troubleshooting only).
+verify_ssl  = true
+; e.g. http://proxy.company.com:8080
+proxy       =
+; true = send your Windows logon credentials to the proxy
+proxy_use_default_credentials = false

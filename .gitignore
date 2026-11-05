@@ -1,0 +1,2 @@
+*.ini
+!mist_ssid_psk_change.ini.example
